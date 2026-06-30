@@ -1,10 +1,12 @@
 # Neon Forge UI — Claude Code Instructions
 
-## Working principle — verify before handing off
-Before giving the user anything to run, make it a true one-shot:
-- Trace every branch the command/prompt could hit (existing folder, wrong remote,
-  dirty tree, conflicts, already-installed, etc.) and handle each in the deliverable.
-- Verify claims by checking (read the file, query the API) — never assert from memory.
+## Working principle — never assert unverified, verify before handing off
+- NEVER state a claim that hasn't been verified — no facts from memory about file
+  contents, repo/PR/API state, or whether something exists. Check first (read the
+  file, query the API), then state. If it can't be verified, say so — never assert.
+- Before giving the user anything to run, make it a true one-shot: trace every branch
+  it could hit (existing folder, wrong remote, dirty tree, conflicts, already-installed)
+  and handle each in the deliverable itself.
 - Fix gaps on our end first. Never send a "do this, then patch what I missed" sequence.
 - A deliverable should be copy-paste-and-done, not step-one-then-debug.
 
