@@ -1,0 +1,7 @@
+# Higgsfield token — never commit this
+token.txt
+
+# Node / Bun
+node_modules/
+.DS_Store
+*.log
