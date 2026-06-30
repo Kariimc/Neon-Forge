@@ -1,5 +1,13 @@
 # Neon Forge UI — Claude Code Instructions
 
+## Working principle — verify before handing off
+Before giving the user anything to run, make it a true one-shot:
+- Trace every branch the command/prompt could hit (existing folder, wrong remote,
+  dirty tree, conflicts, already-installed, etc.) and handle each in the deliverable.
+- Verify claims by checking (read the file, query the API) — never assert from memory.
+- Fix gaps on our end first. Never send a "do this, then patch what I missed" sequence.
+- A deliverable should be copy-paste-and-done, not step-one-then-debug.
+
 ## Stack
 React 19 + TanStack Start + Tailwind v4 + motion/react v12 + Radix UI
 Cloudflare Workers (single worker, SSR). Bun as package manager.
