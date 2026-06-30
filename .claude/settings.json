@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/.claude/hooks/install-principle.cjs\"",
+            "async": true,
+            "timeout": 15,
+            "statusMessage": "Installing global working-principle"
+          }
+        ]
+      }
+    ]
+  }
+}
